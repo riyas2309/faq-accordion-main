@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+body {
+  position: relative;
+  max-width: 100vh;
+  background-color: rgb(250, 238, 224);
+}
+.background-pattern {
+  max-height: 30vh;
+}
+.card {
+  background: white;
+  display: flex;
+  max-width: 40vh;
+  border-radius: 2vh;
+}
+.heading {
+  display: flex;
+}
