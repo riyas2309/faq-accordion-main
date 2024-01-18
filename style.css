@@ -1,1 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap");
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}
+.container {
+  background-color: beige;
+  height: 100vh;
+  width: 100vw;
+}
+.background-pattern-desktop {
+  max-width: 100%;
+  max-height: auto;
+}
+.card {
+  height: auto;
+  width: 70vh;
+  background-color: white;
+  border-radius: 2vh;
+  margin: auto;
+  box-shadow: inset;
+}
+.heading {
+  display: flex;
+  font-size: 40px;
+  font-weight: bolder;
+  gap: 1rem;
+  color: #301333ff;
+  padding: 2rem 3vh;
+}
+.icon {
+  width: 4vh;
+}
+
+.questions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.collapse {
+  color: #301333ff;
+  margin-top: 2vh;
+  padding-bottom: 1rem;
+  cursor: pointer;
+  font-size: medium;
+  font-weight: bold;
+  margin-left: 2rem;
+}
