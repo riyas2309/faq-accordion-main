@@ -1,18 +1,20 @@
-const faqQuestion = document.querySelectorAll("h4");
-faqQuestion.forEach((question) => {
+const faqQuestions = document.querySelectorAll("h4");
+
+faqQuestions.forEach((question) => {
   question.addEventListener("click", () => {
-    faqQuestion.forEach((questionCheck) => {
-      if (questionCheck != question) {
+    faqQuestions.forEach((questionCheck) => {
+      if (questionCheck !== question) {
         questionCheck.nextElementSibling.style.display = "none";
-        questionCheck.firstElementChild.src = "./assets/images/icon-minus.svg";
+        questionCheck.firstElementChild.src = "./assets/images/icon-plus.svg";
       }
     });
+
     if (question.nextElementSibling.style.display === "none") {
       question.nextElementSibling.style.display = "block";
-      question.firstElementChild.src = "./assets/images/icon-plus.svg";
+      question.firstElementChild.src = "./assets/images/icon-minus.svg";
     } else {
       question.nextElementSibling.style.display = "none";
-      question.firstElementChild.src = "./assets/images/icon-minus.svg";
+      question.firstElementChild.src = "./assets/images/icon-plus.svg";
     }
   });
 });
@@ -28,14 +30,14 @@ document.addEventListener("keydown", (e) => {
 });
 
 const hideCurrentAndMove = (direction) => {
-  faqQuestion[currentIndex].nextElementSibling.style.display = "none";
-  faqQuestion[currentIndex].firstElementChild.src =
-    "./assets/images/icon-minus.svg";
+  faqQuestions[currentIndex].nextElementSibling.style.display = "none";
+  faqQuestions[currentIndex].firstElementChild.src =
+    "./assets/images/icon-plus.svg";
 
   currentIndex =
-    (currentIndex + direction + faqQuestion.length) % faqQuestion.length;
+    (currentIndex + direction + faqQuestions.length) % faqQuestions.length;
 
-  faqQuestion[currentIndex].nextElementSibling.style.display = "block";
-  faqQuestion[currentIndex].firstElementChild.src =
-    "./assets/images/icon-plus.svg";
+  faqQuestions[currentIndex].nextElementSibling.style.display = "block";
+  faqQuestions[currentIndex].firstElementChild.src =
+    "./assets/images/icon-minus.svg";
 };
